@@ -1,0 +1,6 @@
+* text eol=lf
+*.pdf binary
+*.iso binary
+*.dll binary
+*.lib binary
+*.so binary
