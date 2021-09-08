@@ -14,4 +14,16 @@
 
   <name>openHAB Add-ons :: Bundles :: eatoneasy Binding</name>
 
+  <dependencies>
+  	<dependency>
+  		<groupId>com.sun.jna</groupId>
+  		<artifactId>jna</artifactId>
+  		<version>3.0.9</version>
+  		<scope>compile</scope>
+  	</dependency>
+  </dependencies>
+  
+  <properties>
+    <dep.noembedding>com.sun.jna;resolution:=optional</dep.noembedding>
+  </properties>
 </project>

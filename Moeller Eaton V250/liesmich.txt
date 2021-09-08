@@ -1,0 +1,85 @@
+====================================================================
+Eaton Industries GmbH, Bonn
+--------------------------------------------------------------------
+EASY_COM.DLL Version 2.5.0
+Stand: 16.11.2011
+====================================================================
+
+Diese Datei enthält Änderungen, die nach Drucklegung der Dokumentation 
+vorgenommen wurden, sowie Hinweise zu bekannten Fehlern.
+
+Neuerungen:
+---------------------------------------------------------
+V2.5.0
+- Erweiterung des Funktionsumfangs zur EASY80x-DC-SWD-Unterstützung:
+  Read_Object_Value und MC_Read_Object_Value um neue Objektkennungen
+  zum Auslesen der Operanden I1-I128 und Q1-Q128 erweitert.
+  Read_Object_Value, MC_Read_Object_Value und Write_Object_Value, 
+  MC_Write_Object_Value erlauben für Merkerbereich-Zugriffe 
+  nun Operandennummern bis 128.
+  
+- Demo-Projekte auf Microsoft Visual Studio 2008 SP1 umgestellt.
+
+- Erweiterung der Dokumentation:
+  Kapitel 3.3 und 3.4 um Hinweise zum Einsatz unter 32/64-Bit Umgebung ergänzt.
+  Neues Kapitel 3.5 "Verwendung mit Java..."
+  Kapitel 4 um Einleitung mit Aufstellung der verwendeten Datentypen
+  ergänzt.
+
+V2.4.2
+- Read_Object_Value und MC_Read_Object_Value liefern für easy500/700
+  jetzt alle Analogwerte (Objektkennung 8).
+  Bislang wurde nur der 1.Analogeingang ausgewertet.
+
+V2.4.0
+- Funktionsbeschreibung zu Read_Object_Value und MC_Read_Object_Value
+  korrigiert (Parameter 'index' für Bit-Merker Objekt 4 und 16).
+
+- Erweiterung des Funktionsumfangs:
+  Neue Funktionen zur Unterstützung von COM-Verbindungen über Modem-
+  oder Funkstrecken (Set_UserWaitingTime und MC_Set_UserWaitingTime).
+
+V2.3.0
+- Erweiterung des Funktionsumfangs:
+  Der Zugriff auf Merkerbereiche muss sich nicht mehr unbedingt an 
+  Doppelwortgrenzen orientieren. Hierzu wurden die Zugriffs-
+  funktionen Read_Object_Value und Write_Object_Value bzw.
+  MC_Read_Object_Value und MC_Write_Object_Value um die neue
+  Objektkennung 17 (Merkerbyte) ergänzt und der Parameter "Index"
+  von 8 auf 16 Bit verbreitert. Die Schnittstellenbeschreibungen im 
+  Unterverzeichnis "Doku" wurden entsprechend angepasst.
+  Vorhandene Projekte müssen mit diesen Dateien neu übersetzt werden,
+  um die neue Version der EASY_COM.DLL nutzen zu können!
+  
+- Das neue Unterverzeichnis "DemoVB.NET" enthält ein kleines Demo-
+  Projekt, das den Aufruf der EASY_COM.DLL unter Microsoft Visual
+  Basic 2005 (VB.NET) demonstriert.
+  Im "Doku" Unterverzeichnis ist darüberhinaus auch eine neue Datei
+  "easyComApi.vb" ergänzt worden, die die Schnittstelle der
+  EASY_COM.DLL im VB.NET Dialekt beschreibt.
+
+V2.2.0
+- Erweiterung des Funktionsumfangs:
+  Es können jetzt mehrere offene Verbindungen gleichzeitig betrieben
+  werden (Mehrfachverbindungsmodus).
+  
+- Im Mehrfachverbindungsmodus kann die Anzahl der zu lesenden Merker
+  mittels eines neuen Längenparameters angegeben werden (äquivalent
+  zur Schreibfunktion).
+
+V2.0.1
+- Freigabe des benutzten Datei-Handles beim Schließen der Ethernet-
+  Verbindung.
+  Bisheriges Verhalten:
+  Nach häufigem Öffnen und Schließen einer Ethernet-Verbindung ohne
+  Neustart der Anwendung waren alle Datei-Handles verbraucht und die
+  Funktion Open_EthernetPort lieferte dann bis zum nächsten Neustart
+  der Anwendung Fehlercode 14.
+
+  
+Weitere Einzelheiten entnehmen Sie bitte den aktualisierten
+Anwendungshinweisen zur Bibliothek.
+  
+====================================================================
+Ende der Datei
+====================================================================
