@@ -4,7 +4,7 @@ import com.sun.jna.Library;
 import com.sun.jna.ptr.ByteByReference;
 import com.sun.jna.ptr.IntByReference;
 
-interface DLLinterface extends Library {
+interface DLLinterfaceSC extends Library {
     int Open_ComPort(byte com_port_nr, int baudrate);
 
     int Close_ComPort();
