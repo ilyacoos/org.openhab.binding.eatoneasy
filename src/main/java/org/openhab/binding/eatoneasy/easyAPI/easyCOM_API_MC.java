@@ -1,4 +1,4 @@
-package org.openhab.binding.eatoneasy.api;
+package org.openhab.binding.eatoneasy.easyAPI;
 
 import java.text.DateFormat;
 
