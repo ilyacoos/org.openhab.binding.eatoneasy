@@ -22,7 +22,9 @@ public class eatoneasyConfiguration {
     /**
      * Sample configuration parameters. Replace with your own.
      */
-    public String hostname;
+    public int netId;
     public String password;
-    public int refreshInterval;
+    public int timeout;
+    public int comPort;
+    public int baudRate;
 }

@@ -4,7 +4,8 @@
 
 	<feature name="openhab-binding-eatoneasy" description="eatoneasy Binding" version="${project.version}">
 		<feature>openhab-runtime-base</feature>
+		<bundle dependency="true">mvn:net.java.dev.jna/jna/5.5.0</bundle>
+        <bundle dependency="true">mvn:net.java.dev.jna/jna-platform/5.5.0</bundle>
 		<bundle start-level="80">mvn:org.openhab.addons.bundles/org.openhab.binding.eatoneasy/${project.version}</bundle>
-		<!-- <bundle dependency="true">mvn:com.sun.jna/jna/3.0.9</bundle> -->
 	</feature>
 </features>

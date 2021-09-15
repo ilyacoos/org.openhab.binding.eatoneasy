@@ -12,7 +12,7 @@
  */
 package org.openhab.binding.eatoneasy.internal;
 
-import static org.openhab.binding.eatoneasy.internal.eatoneasyBindingConstants.*;
+import static org.openhab.binding.eatoneasy.internal.eatoneasyBindingConstants.THING_TYPE_EASY800MFD;
 
 import java.util.Set;
 
@@ -35,7 +35,7 @@ import org.osgi.service.component.annotations.Component;
 @Component(configurationPid = "binding.eatoneasy", service = ThingHandlerFactory.class)
 public class eatoneasyHandlerFactory extends BaseThingHandlerFactory {
 
-    private static final Set<ThingTypeUID> SUPPORTED_THING_TYPES_UIDS = Set.of(THING_TYPE_SAMPLE);
+    private static final Set<ThingTypeUID> SUPPORTED_THING_TYPES_UIDS = Set.of(THING_TYPE_EASY800MFD);
 
     @Override
     public boolean supportsThingType(ThingTypeUID thingTypeUID) {
@@ -46,10 +46,7 @@ public class eatoneasyHandlerFactory extends BaseThingHandlerFactory {
     protected @Nullable ThingHandler createHandler(Thing thing) {
         ThingTypeUID thingTypeUID = thing.getThingTypeUID();
 
-        if (THING_TYPE_SAMPLE.equals(thingTypeUID)) {
-            return new eatoneasyHandler(thing);
-        }
+        return new eatoneasyHandler(thing, thingTypeUID);
 
-        return null;
     }
 }

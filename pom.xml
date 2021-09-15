@@ -7,22 +7,30 @@
   <parent>
     <groupId>org.openhab.addons.bundles</groupId>
     <artifactId>org.openhab.addons.reactor.bundles</artifactId>
-    <version>3.2.0-SNAPSHOT</version>
+    <version>3.1.0</version>
   </parent>
 
   <artifactId>org.openhab.binding.eatoneasy</artifactId>
 
   <name>openHAB Add-ons :: Bundles :: eatoneasy Binding</name>
 
+  <properties>
+    <dep.noembedding>jna,jna-platform</dep.noembedding>
+  </properties>
+  
   <dependencies>
-  	<dependency>
-        <groupId>net.java.dev.jna</groupId>
-        <artifactId>jna</artifactId>
-        <version>5.9.0</version>
+    <dependency>
+      <groupId>net.java.dev.jna</groupId>
+      <artifactId>jna-platform</artifactId>
+      <version>5.5.0</version>
+      <scope>compile</scope>
+    </dependency>
+    <dependency>
+      <groupId>net.java.dev.jna</groupId>
+      <artifactId>jna</artifactId>
+      <version>5.5.0</version>
+      <scope>compile</scope>
     </dependency>
   </dependencies>
-  
-  <properties>
-    <dep.noembedding>net.java.dev.jna;resolution:=optional</dep.noembedding>
-  </properties>
+
 </project>

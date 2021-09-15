@@ -1,4 +1,4 @@
-package org.openhab.binding.eatoneasy.easyAPI;
+package org.openhab.binding.eatoneasy.internal.comapi;
 
 import com.sun.jna.Library;
 import com.sun.jna.Pointer;

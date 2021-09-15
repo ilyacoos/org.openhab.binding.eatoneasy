@@ -5,42 +5,145 @@
 	xsi:schemaLocation="https://openhab.org/schemas/thing-description/v1.0.0 https://openhab.org/schemas/thing-description-1.0.0.xsd">
 
 	<!-- Sample Thing Type -->
-	<thing-type id="sample">
+	<thing-type id="Easy800MFD">
 		<!-- Comment this in for Things which need a Bridge to function.
 			<supported-bridge-type-refs>
-			<bridge-type-ref id="eatoneasyBridge" />
-			</supported-bridge-type-refs>
-		-->
+			<bridge-type-ref id="Com" />
+			</supported-bridge-type-refs>-->
+		
 
-		<label>eatoneasy Binding Thing</label>
-		<description>Sample thing for eatoneasy Binding</description>
+		<label>Eaton Easy 800 / MFD</label>
+		<description>Eaton Easy800 or MFD-Titan device</description>
 
 		<channels>
-			<channel id="channel1" typeId="sample-channel"/>
+            <channel id="M01" typeId="marker-channel" />
+            <channel id="M02" typeId="marker-channel"/>
+            <channel id="M03" typeId="marker-channel"/>
+            <channel id="M04" typeId="marker-channel"/>
+            <channel id="M05" typeId="marker-channel"/>
+            <channel id="M06" typeId="marker-channel"/>
+            <channel id="M07" typeId="marker-channel"/>
+            <channel id="M08" typeId="marker-channel"/>
+            <channel id="M09" typeId="marker-channel"/>
+            <channel id="M10" typeId="marker-channel"/>
+            <channel id="M11" typeId="marker-channel"/>
+            <channel id="M12" typeId="marker-channel"/>
+            <channel id="M13" typeId="marker-channel"/>
+            <channel id="M14" typeId="marker-channel"/>
+            <channel id="M15" typeId="marker-channel"/>
+            <channel id="M16" typeId="marker-channel"/>
+            <channel id="M17" typeId="marker-channel"/>
+            <channel id="M18" typeId="marker-channel"/>
+            <channel id="M19" typeId="marker-channel"/>
+            <channel id="M20" typeId="marker-channel"/>
+            <channel id="M21" typeId="marker-channel"/>
+            <channel id="M22" typeId="marker-channel"/>
+            <channel id="M23" typeId="marker-channel"/>
+            <channel id="M24" typeId="marker-channel"/>
+            <channel id="M25" typeId="marker-channel"/>
+            <channel id="M26" typeId="marker-channel"/>
+            <channel id="M27" typeId="marker-channel"/>
+            <channel id="M28" typeId="marker-channel"/>
+            <channel id="M29" typeId="marker-channel"/>
+            <channel id="M30" typeId="marker-channel"/>
+            <channel id="M31" typeId="marker-channel"/>
+            <channel id="M32" typeId="marker-channel"/>
+            <channel id="M33" typeId="marker-channel"/>
+            <channel id="M34" typeId="marker-channel"/>
+            <channel id="M35" typeId="marker-channel"/>
+            <channel id="M36" typeId="marker-channel"/>
+            <channel id="M37" typeId="marker-channel"/>
+            <channel id="M38" typeId="marker-channel"/>
+            <channel id="M39" typeId="marker-channel"/>
+            <channel id="M40" typeId="marker-channel"/>
+            <channel id="M41" typeId="marker-channel"/>
+            <channel id="M42" typeId="marker-channel"/>
+            <channel id="M43" typeId="marker-channel"/>
+            <channel id="M44" typeId="marker-channel"/>
+            <channel id="M45" typeId="marker-channel"/>
+            <channel id="M46" typeId="marker-channel"/>
+            <channel id="M47" typeId="marker-channel"/>
+            <channel id="M48" typeId="marker-channel"/>
+            <channel id="M49" typeId="marker-channel"/>
+            <channel id="M50" typeId="marker-channel"/>
+            <channel id="M51" typeId="marker-channel"/>
+            <channel id="M52" typeId="marker-channel"/>
+            <channel id="M53" typeId="marker-channel"/>
+            <channel id="M54" typeId="marker-channel"/>
+            <channel id="M55" typeId="marker-channel"/>
+            <channel id="M56" typeId="marker-channel"/>
+            <channel id="M57" typeId="marker-channel"/>
+            <channel id="M58" typeId="marker-channel"/>
+            <channel id="M59" typeId="marker-channel"/>
+            <channel id="M60" typeId="marker-channel"/>
+            <channel id="M61" typeId="marker-channel"/>
+            <channel id="M62" typeId="marker-channel"/>
+            <channel id="M63" typeId="marker-channel"/>
+            <channel id="M64" typeId="marker-channel"/>
+            <channel id="M65" typeId="marker-channel"/>
+            <channel id="M66" typeId="marker-channel"/>
+            <channel id="M67" typeId="marker-channel"/>
+            <channel id="M68" typeId="marker-channel"/>
+            <channel id="M69" typeId="marker-channel"/>
+            <channel id="M70" typeId="marker-channel"/>
+            <channel id="M71" typeId="marker-channel"/>
+            <channel id="M72" typeId="marker-channel"/>
+            <channel id="M73" typeId="marker-channel"/>
+            <channel id="M74" typeId="marker-channel"/>
+            <channel id="M75" typeId="marker-channel"/>
+            <channel id="M76" typeId="marker-channel"/>
+            <channel id="M77" typeId="marker-channel"/>
+            <channel id="M78" typeId="marker-channel"/>
+            <channel id="M79" typeId="marker-channel"/>
+            <channel id="M80" typeId="marker-channel"/>
+            <channel id="M81" typeId="marker-channel"/>
+            <channel id="M82" typeId="marker-channel"/>
+            <channel id="M83" typeId="marker-channel"/>
+            <channel id="M84" typeId="marker-channel"/>
+            <channel id="M85" typeId="marker-channel"/>
+            <channel id="M86" typeId="marker-channel"/>
+            <channel id="M87" typeId="marker-channel"/>
+            <channel id="M88" typeId="marker-channel"/>
+            <channel id="M89" typeId="marker-channel"/>
+            <channel id="M90" typeId="marker-channel"/>
+            <channel id="M91" typeId="marker-channel"/>
+            <channel id="M92" typeId="marker-channel"/>
+            <channel id="M93" typeId="marker-channel"/>
+            <channel id="M94" typeId="marker-channel"/>
+            <channel id="M95" typeId="marker-channel"/>
+            <channel id="M96" typeId="marker-channel"/>
 		</channels>
 
 		<config-description>
-			<parameter name="hostname" type="text" required="true">
-				<context>network-address</context>
-				<label>Hostname</label>
-				<description>Hostname or IP address of the device</description>
-			</parameter>
-			<parameter name="password" type="text" required="true">
+            <parameter name="netId" type="integer" min="1" max="8" required="true">
+                <label>Net ID</label>
+                <description>NET ID in EasyNET</description>
+            </parameter>
+		    <parameter name="comPort" type="integer" min="1" max="255" required="true">
+                <label>COM port number</label>
+                <description>Which COM port to connect</description>
+            </parameter>
+			<parameter name="password" type="text" min="6" max="6">
 				<context>password</context>
 				<label>Password</label>
-				<description>Passwort to access the device</description>
+				<description>Password to unlock the device if exists</description>
 			</parameter>
-			<parameter name="refreshInterval" type="integer" unit="s" min="1">
-				<label>Refresh Interval</label>
-				<description>Interval the device is polled in sec.</description>
+			<parameter name="timeout" type="integer" unit="ms" min="100" max="90000">
+				<label>Timeout</label>
+				<description>Timeout to wait for a device to answer. This values is common for all COM-connections and is taken from the first device connected. Default: 800 ms</description>
 			</parameter>
+            <parameter name="baudRate" type="integer" min="4800" step="4800" max="57600" pattern="4800|9600|19200|38400|57600" >
+                <label>Baud rate</label>
+                <description>Communication speed. Default: 19200</description>
+            </parameter>
 		</config-description>
 	</thing-type>
 
 	<!-- Sample Channel Type -->
-	<channel-type id="sample-channel">
-		<item-type>Number:Temperature</item-type>
-		<label>Example Temperature</label><!-- Use uppercase words, except prepositions. 2-3 words, max 25 chars -->
-		<description>Sample channel for eatoneasy Binding</description>
+	<channel-type id="marker-channel">
+		<item-type>Switch</item-type>
+		<label>Marker</label><!-- Use uppercase words, except prepositions. 2-3 words, max 25 chars -->
+		<description>Marker switch</description>
+		<state readOnly="false"/>
 	</channel-type>
 </thing:thing-descriptions>
